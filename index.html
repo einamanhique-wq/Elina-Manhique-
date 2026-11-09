@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Website educativo da Turma B01 sobre gravidez precoce e abandono escolar.">
+<meta name="theme-color" content="#123b55">
+<title>Gravidez Precoce e Abandono Escolar | Turma B01</title>
+<style>
+:root{--navy:#123b55;--blue:#176b87;--teal:#18877d;--mint:#e1f2ed;--gold:#f2bd59;--ink:#203344;--muted:#617586;--bg:#f5f8fa;--line:#e1eaf0}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+header{position:sticky;top:0;z-index:10;background:var(--navy);color:white;box-shadow:0 4px 18px #123b5530}
+.bar{max-width:1150px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:850;color:white;text-decoration:none;letter-spacing:.5px}.brand small{display:block;color:#c9dce5;font-size:10px;letter-spacing:1.5px}
+nav{display:flex;flex-wrap:wrap;gap:3px}nav a{color:#eaf4f7;text-decoration:none;padding:7px 9px;border-radius:8px;font-size:12px;font-weight:700}nav a:hover,nav a.active{background:#ffffff24}
+#menu{display:none;background:none;border:1px solid #ffffff88;color:white;border-radius:8px;padding:6px 10px;font-size:20px}
+main{max-width:1150px;margin:auto;padding:20px}.page{display:none;animation:fade .3s}.page.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:25px;align-items:center;background:linear-gradient(125deg,#e5f3f1,#f8fbfc);border:1px solid #dcebe9;border-radius:25px;padding:clamp(22px,5vw,48px);margin:14px 0 28px}
+.tag{display:inline-block;background:#d6eee7;color:#126b65;padding:6px 12px;border-radius:30px;font-size:12px;font-weight:800;letter-spacing:1px}
+h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.08;letter-spacing:-1.5px;color:var(--navy);margin:16px 0}h1 span{color:var(--teal)}
+h2{font-size:clamp(1.7rem,3vw,2.3rem);color:var(--navy);margin:8px 0 12px}h3{color:var(--navy);margin-bottom:8px}
+p{margin:10px 0}.lead{font-size:1.12rem;color:#526a79}.muted{color:var(--muted)}
+.btn{display:inline-block;background:var(--teal);color:white;text-decoration:none;padding:10px 16px;border-radius:10px;font-weight:750;margin:12px 8px 0 0}.btn.outline{background:transparent;color:var(--navy);border:1px solid #9bb8c4}
+.art svg{width:100%;max-height:300px}.meta{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0 28px}.pill{background:white;border:1px solid var(--line);padding:7px 12px;border-radius:30px;font-size:13px;font-weight:700;color:#536b7a}
+.kicker{font-size:12px;color:var(--teal);font-weight:850;letter-spacing:1.4px;text-transform:uppercase}.intro{max-width:800px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:18px 0}.card,.panel{background:white;border:1px solid var(--line);border-radius:16px;padding:19px;box-shadow:0 5px 18px #123b5508}.card p,.panel p{font-size:14px;color:#596f7e}.ico{font-size:24px;background:var(--mint);width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:18px 0}.callout{background:var(--navy);color:white;padding:22px;border-radius:17px;margin:22px 0}.callout strong{color:#ffda8c}
+.notice{background:#fff5df;border:1px solid #f1dfb9;border-radius:14px;padding:16px;margin:18px 0}
+ul,ol{padding-left:22px;margin:8px 0}li{padding:3px 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}.step{background:white;border:1px solid var(--line);border-radius:14px;padding:16px}.step b{background:var(--gold);color:var(--navy);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;margin-bottom:10px}
+.tablewrap{overflow-x:auto;border-radius:14px;border:1px solid var(--line);margin:18px 0;background:white}table{border-collapse:collapse;width:100%;min-width:560px}th,td{text-align:left;padding:12px 15px;border-bottom:1px solid var(--line);font-size:14px;vertical-align:top}th{background:var(--navy);color:white}tr:last-child td{border:0}
+.team{background:linear-gradient(120deg,var(--navy),var(--blue));color:white;border-radius:20px;padding:25px}.team h2,.team h3{color:white}.team p{color:#e0edf2}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{padding:13px;border:1px solid #ffffff44;background:#ffffff13;border-radius:10px}.field small{display:block;color:#c8dce5;text-transform:uppercase;letter-spacing:1px}.field b{display:block;margin-top:4px}
+footer{text-align:center;background:#0b293d;color:#d7e5eb;padding:25px 15px;font-size:13px}
+@media(max-width:900px){nav a{font-size:11px;padding:6px}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.bar{flex-wrap:wrap}#menu{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);padding:12px;flex-direction:column}nav.open{display:flex}nav a{font-size:14px;padding:10px}.hero{grid-template-columns:1fr}.art svg{max-height:210px}.grid,.two{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}main{padding:14px}}
+@media(max-width:390px){.steps,.fields{grid-template-columns:1fr}}
+</style></head>
+<body>
+<header><div class="bar">
+<a class="brand" href="#inicio">🌱 JUVENTUDE COM FUTURO<small>PROJECTO EDUCATIVO • TURMA B01</small></a>
+<button id="menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+<nav id="nav">
+<a href="#inicio">Início</a><a href="#introducao">Introdução</a><a href="#objectivos">Objectivos</a><a href="#desenvolvimento">Desenvolvimento</a><a href="#solucoes">Soluções</a><a href="#recomendacoes">Recomendações</a><a href="#conclusao">Conclusão</a><a href="#referencias">Referências</a><a href="#grupo">Grupo</a>
+</nav></div></header>
+<main>
+<section class="page" id="inicio">
+<div class="hero"><div><span class="tag">EDUCAÇÃO • SAÚDE • DIREITOS</span>
+<h1>Gravidez Precoce <span>e Abandono Escolar</span></h1>
+<p class="lead">Com informação, prevenção e apoio, podemos proteger os sonhos dos adolescentes e garantir que a gravidez não seja o fim do percurso escolar.</p>
+<a class="btn" href="#introducao">Explorar o tema →</a><a class="btn outline" href="#solucoes">Conhecer soluções</a></div>
+<div class="art"><svg viewBox="0 0 400 300" role="img" aria-label="Ilustração de livros e planta a crescer"><circle cx="200" cy="135" r="120" fill="#d4eee7"/><circle cx="300" cy="55" r="22" fill="#f2bd59"/><path d="M200 205V90" stroke="#18877d" stroke-width="9" stroke-linecap="round"/><path d="M198 140Q125 130 135 72Q190 68 198 140Z" fill="#18877d"/><path d="M202 118Q215 48 275 57Q270 110 202 118Z" fill="#f2bd59"/><path d="M75 210Q135 185 200 210Q265 185 325 210V245Q260 222 200 247Q140 222 75 245Z" fill="#123b55"/><path d="M200 210V247" stroke="white" stroke-width="3"/><path d="M85 207Q140 182 198 207M202 207Q260 182 315 207" fill="none" stroke="#f2bd59" stroke-width="5"/><text x="200" y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#123b55">O FUTURO CONTINUA NA ESCOLA</text></svg></div></div>
+<div class="meta"><span class="pill">📘 Trabalho escolar</span><span class="pill">🎓 Turma B01</span><span class="pill">🇲🇿 Contexto educativo</span></div>
+<span class="kicker">A nossa mensagem</span><h2>Uma questão que merece atenção de todos</h2>
+<p class="intro">A gravidez na adolescência pode trazer desafios pessoais, familiares e escolares. A resposta não deve ser o julgamento, mas sim informação, prevenção, protecção e oportunidades para continuar a estudar.</p>
+<div class="grid">
+<article class="card"><div class="ico">📚</div><h3>Direito à educação</h3><p>Todos os estudantes merecem oportunidades para aprender, progredir e concluir a sua formação.</p></article>
+<article class="card"><div class="ico">🩺</div><h3>Saúde e informação</h3><p>Informação adequada e acesso a serviços de saúde ajudam os adolescentes a tomar decisões informadas.</p></article>
+<article class="card"><div class="ico">🤝</div><h3>Apoio e respeito</h3><p>Uma estudante grávida ou mãe adolescente precisa de acolhimento e apoio para continuar os estudos.</p></article></div>
+<div class="callout"><strong>Mensagem central</strong><p>Prevenir a gravidez precoce e combater o abandono escolar é uma responsabilidade partilhada entre alunos, famílias, escola, serviços de saúde e comunidade.</p></div>
+</section>
+
+<section class="page" id="introducao"><span class="kicker">01 • Enquadramento</span><h2>Introdução</h2><p class="intro">Contextualização do tema e sua importância no ambiente escolar.</p>
+<p>A adolescência é uma fase de crescimento e transformação, marcada por mudanças físicas, emocionais e sociais. Neste período, os jovens precisam de informação correcta, orientação e condições para tomar decisões responsáveis sobre a sua saúde e o seu futuro.</p>
+<p>A gravidez precoce, também chamada gravidez na adolescência, pode acontecer por diferentes razões, como falta de informação, dificuldades de acesso aos serviços de saúde, pressão dos parceiros, desigualdade de género e situações de violência ou abuso.</p>
+<p>Quando uma adolescente engravida, pode enfrentar dificuldades para continuar a frequentar a escola. Consultas, responsabilidades de cuidado, dificuldades económicas, preconceito e falta de apoio podem contribuir para faltas, interrupção temporária ou abandono escolar. Porém, a gravidez não deve significar o fim da educação nem dos projectos de vida.</p>
+<p>Este trabalho procura explicar a relação entre gravidez precoce e abandono escolar, apresentar os factores que contribuem para o problema e indicar medidas de prevenção e apoio que podem ser aplicadas pela comunidade escolar.</p>
+<div class="callout"><strong>Por que estudar este tema?</strong><p>Porque a informação ajuda a prevenir situações de risco, combate o preconceito e incentiva a criação de uma escola segura, inclusiva e capaz de apoiar todos os estudantes.</p></div></section>
+
+<section class="page" id="objectivos"><span class="kicker">02 • Finalidade do trabalho</span><h2>Objectivos</h2>
+<div class="panel"><span class="kicker">Objectivo geral</span><h3>Compreender a problemática da gravidez precoce e do abandono escolar</h3><p>Identificar as suas causas, consequências e possíveis soluções, contribuindo para a sensibilização da comunidade escolar e para a protecção do direito à educação.</p></div>
+<h2 style="margin-top:28px">Objectivos específicos</h2><p class="intro">Com este trabalho, pretende-se:</p>
+<div class="grid">
+<article class="card"><h3>01. Definir conceitos</h3><p>Explicar o significado de gravidez precoce e abandono escolar.</p></article>
+<article class="card"><h3>02. Identificar causas</h3><p>Reconhecer factores individuais, familiares e sociais associados ao problema.</p></article>
+<article class="card"><h3>03. Analisar consequências</h3><p>Descrever impactos possíveis na saúde, na família e na vida escolar.</p></article>
+<article class="card"><h3>04. Relacionar fenómenos</h3><p>Compreender como a gravidez pode dificultar a continuidade dos estudos.</p></article>
+<article class="card"><h3>05. Apresentar soluções</h3><p>Indicar medidas práticas de prevenção, protecção e apoio.</p></article>
+<article class="card"><h3>06. Sensibilizar</h3><p>Incentivar respeito, responsabilidade e solidariedade na comunidade.</p></article></div></section>
+
+<section class="page" id="desenvolvimento"><span class="kicker">03 • Análise do tema</span><h2>Desenvolvimento</h2><p class="intro">Conceitos fundamentais, causas, consequências e impacto na vida escolar.</p>
+<div class="two"><div class="panel"><h3>O que é gravidez precoce?</h3><p>É a gravidez que ocorre durante a adolescência. Pode envolver desafios de saúde, emocionais, familiares e sociais, sendo importante garantir acompanhamento por profissionais de saúde e apoio adequado.</p></div><div class="panel"><h3>O que é abandono escolar?</h3><p>É a interrupção da frequência escolar antes de o aluno concluir o nível de ensino que está a frequentar. Pode resultar de factores pessoais, familiares, económicos e institucionais.</p></div></div>
+<h2>3.1 Principais causas</h2><p class="intro">A gravidez na adolescência não tem uma única causa. Vários factores podem estar relacionados.</p>
+<div class="grid">
+<article class="card"><div class="ico">📖</div><h3>Falta de informação</h3><p>Conhecimento insuficiente sobre sexualidade, reprodução, consentimento e prevenção da gravidez.</p></article>
+<article class="card"><div class="ico">🏥</div><h3>Barreiras nos serviços de saúde</h3><p>Dificuldade de acesso a aconselhamento e serviços acolhedores e adequados aos adolescentes.</p></article>
+<article class="card"><div class="ico">⚖️</div><h3>Desigualdade e pressão</h3><p>Pressão do parceiro, relações desiguais e dificuldade de tomar decisões livres e informadas.</p></article>
+<article class="card"><div class="ico">🛡️</div><h3>Violência e abuso</h3><p>Violência sexual, exploração ou relações sem consentimento podem resultar em gravidez.</p></article>
+<article class="card"><div class="ico">🏠</div><h3>Vulnerabilidade económica</h3><p>Pobreza, dependência e falta de oportunidades podem aumentar a exposição a situações de risco.</p></article>
+<article class="card"><div class="ico">💬</div><h3>Falta de diálogo</h3><p>Ausência de conversas abertas e seguras entre adolescentes, famílias, escola e profissionais.</p></article></div>
+<div class="notice"><b>Importante:</b> a responsabilidade pela prevenção não deve ser colocada apenas sobre as raparigas. Rapazes, famílias, escolas, comunidades e instituições também têm um papel essencial.</div>
+<h2>3.2 Consequências possíveis</h2><div class="two">
+<div class="panel"><h3>Na saúde e no bem-estar</h3><ul><li>Necessidade de acompanhamento pré-natal e cuidados de saúde.</li><li>Desafios físicos e emocionais.</li><li>Possível ansiedade, isolamento ou sofrimento devido ao estigma.</li><li>Maior dificuldade quando faltam apoio e cuidados adequados.</li></ul></div>
+<div class="panel"><h3>Na família e na vida social</h3><ul><li>Aumento das responsabilidades familiares.</li><li>Possíveis dificuldades económicas.</li><li>Conflitos familiares ou rejeição em situações sem apoio.</li><li>Risco de discriminação e exclusão social.</li></ul></div></div>
+<h2>3.3 Impacto na vida escolar</h2><div class="tablewrap"><table><tr><th>Desafio</th><th>Como pode afectar os estudos</th><th>Resposta de apoio</th></tr>
+<tr><td>Consultas e cuidados de saúde</td><td>Pode haver faltas ou necessidade de ajustar horários.</td><td>Diálogo com a escola e organização do acompanhamento das aulas.</td></tr>
+<tr><td>Cuidados com o bebé</td><td>Pode tornar mais difícil estudar e realizar tarefas escolares.</td><td>Apoio familiar e soluções para acompanhar os estudos.</td></tr>
+<tr><td>Dificuldades económicas</td><td>Podem limitar transporte, material escolar e assiduidade.</td><td>Encaminhamento para apoios sociais disponíveis.</td></tr>
+<tr><td>Estigma e discriminação</td><td>Podem provocar isolamento e afastamento da escola.</td><td>Prevenção do bullying e promoção do respeito.</td></tr></table></div>
+<div class="callout"><strong>Ideia essencial</strong><p>A gravidez pode alterar o percurso de uma adolescente, mas não deve retirar-lhe o direito de aprender, sonhar e construir o seu futuro.</p></div></section>
+
+<section class="page" id="solucoes"><span class="kicker">04 • Acção e prevenção</span><h2>Soluções e medidas de prevenção</h2><p class="intro">Propostas práticas para reduzir a gravidez não planeada na adolescência e prevenir o abandono escolar.</p>
+<div class="steps">
+<div class="step"><b>1</b><h3>Educação e informação</h3><p>Promover educação adequada à idade sobre saúde, reprodução, consentimento e responsabilidade.</p></div>
+<div class="step"><b>2</b><h3>Acesso à saúde</h3><p>Facilitar o acesso a aconselhamento e serviços de saúde acolhedores e confidenciais.</p></div>
+<div class="step"><b>3</b><h3>Diálogo familiar</h3><p>Incentivar conversas sem ameaças, vergonha ou humilhação.</p></div>
+<div class="step"><b>4</b><h3>Protecção</h3><p>Prevenir violência, abuso, exploração e relações forçadas.</p></div>
+<div class="step"><b>5</b><h3>Escola inclusiva</h3><p>Combater discriminação e apoiar a continuidade dos estudos.</p></div>
+<div class="step"><b>6</b><h3>Participação dos rapazes</h3><p>Envolver rapazes na responsabilidade, respeito e prevenção.</p></div>
+<div class="step"><b>7</b><h3>Acompanhamento</h3><p>Encaminhar adolescentes para profissionais de saúde e apoio psicossocial.</p></div>
+<div class="step"><b>8</b><h3>Oportunidades</h3><p>Promover actividades educativas, orientação e projectos de vida.</p></div></div>
+<div class="panel"><h3>Medidas que a escola pode implementar</h3><ul><li>Organizar palestras, debates e campanhas de sensibilização.</li><li>Disponibilizar orientação e encaminhamento para serviços competentes.</li><li>Prevenir e responder à violência, ao assédio e ao bullying.</li><li>Proteger a privacidade dos estudantes.</li><li>Dialogar com estudantes e famílias para apoiar a permanência e o regresso à escola.</li></ul></div>
+<div class="notice"><b>Em caso de violência, abuso ou relação sem consentimento:</b> procurar ajuda de um adulto de confiança, profissional de saúde ou serviço de protecção competente. Em perigo imediato, procurar os serviços de emergência locais.</div></section>
+
+<section class="page" id="recomendacoes"><span class="kicker">05 • Compromisso colectivo</span><h2>Recomendações</h2><p class="intro">Conselhos dirigidos aos alunos, professores, encarregados de educação e à direcção da escola.</p>
+<div class="grid">
+<article class="card"><div class="ico">🎓</div><h3>Aos alunos</h3><ul><li>Procurar informação em fontes seguras.</li><li>Respeitar os colegas e evitar discriminação.</li><li>Não pressionar ninguém para relações sexuais.</li><li>Conversar com adultos de confiança.</li><li>Valorizar a educação e apoiar os colegas.</li></ul></article>
+<article class="card"><div class="ico">👩‍🏫</div><h3>Aos professores</h3><ul><li>Promover debates e actividades educativas.</li><li>Tratar todos com respeito e imparcialidade.</li><li>Combater bullying, estigma e exclusão.</li><li>Encaminhar situações de risco para apoio especializado.</li><li>Incentivar a continuidade dos estudos.</li></ul></article>
+<article class="card"><div class="ico">👨‍👩‍👧</div><h3>Aos encarregados de educação</h3><ul><li>Manter diálogo aberto com os adolescentes.</li><li>Acompanhar a vida escolar e emocional.</li><li>Procurar orientação profissional quando necessário.</li><li>Oferecer apoio sem humilhação ou violência.</li><li>Valorizar a educação de raparigas e rapazes.</li></ul></article>
+<article class="card"><div class="ico">🏫</div><h3>À direcção da escola</h3><ul><li>Realizar campanhas de sensibilização.</li><li>Garantir um ambiente seguro e inclusivo.</li><li>Proteger a privacidade dos estudantes.</li><li>Aplicar procedimentos de protecção.</li><li>Apoiar a continuidade escolar de estudantes grávidas e mães adolescentes.</li></ul></article>
+<article class="card"><div class="ico">🌍</div><h3>À comunidade</h3><ul><li>Participar nas acções de sensibilização.</li><li>Rejeitar violência e casamento infantil.</li><li>Apoiar famílias em situação de vulnerabilidade.</li><li>Colaborar com escolas e serviços de saúde.</li></ul></article>
+<article class="card"><div class="ico">🩺</div><h3>Aos serviços de saúde</h3><ul><li>Prestar informação correcta e adequada à idade.</li><li>Atender adolescentes com respeito e confidencialidade.</li><li>Disponibilizar aconselhamento e cuidados de saúde.</li><li>Articular com serviços de apoio quando apropriado.</li></ul></article></div></section>
+
+<section class="page" id="conclusao"><span class="kicker">06 • Síntese final</span><h2>Conclusão</h2>
+<p>A gravidez precoce e o abandono escolar constituem desafios que exigem atenção da família, da escola, dos serviços de saúde e de toda a comunidade. A gravidez na adolescência pode estar associada a factores como falta de informação, desigualdade, violência, dificuldades económicas e barreiras no acesso aos serviços de saúde.</p>
+<p>As dificuldades de saúde, as responsabilidades familiares, o preconceito e a falta de apoio podem prejudicar a frequência escolar e aumentar o risco de abandono. Contudo, esse resultado não é inevitável. A prevenção, o acompanhamento adequado, o apoio familiar e um ambiente escolar inclusivo podem ajudar a adolescente a continuar a sua formação.</p>
+<p>Concluímos que a solução passa pela educação, pelo diálogo, pela protecção dos direitos, pelo acesso à saúde e pela responsabilidade partilhada. Nenhum estudante deve ser humilhado ou excluído. Uma comunidade que informa, previne e apoia contribui para um futuro com mais oportunidades.</p>
+<div class="callout"><strong>O nosso compromisso</strong><p>Prevenir a gravidez precoce, combater o abandono escolar e defender uma escola onde todos tenham a oportunidade de aprender e realizar os seus sonhos.</p></div></section>
+
+<section class="page" id="referencias"><span class="kicker">07 • Fontes de consulta</span><h2>Referências bibliográficas</h2><p class="intro">Instituições de referência para aprofundar o tema. O grupo deve registar as páginas e documentos que consultar efectivamente.</p>
+<div class="panel"><ol>
+<li><b>Organização Mundial da Saúde (OMS).</b> Informação sobre saúde dos adolescentes e saúde sexual e reprodutiva. <a href="https://www.who.int/health-topics/adolescent-health" target="_blank" rel="noopener">Consultar OMS</a>.</li>
+<li><b>UNICEF.</b> Materiais sobre direitos da criança, educação, protecção e adolescência. <a href="https://www.unicef.org/" target="_blank" rel="noopener">Consultar UNICEF</a>.</li>
+<li><b>UNESCO.</b> Recursos sobre educação, igualdade e educação em sexualidade. <a href="https://www.unesco.org/" target="_blank" rel="noopener">Consultar UNESCO</a>.</li>
+<li><b>Ministério da Saúde de Moçambique.</b> Orientações e informação sobre serviços de saúde disponíveis no país.</li>
+<li><b>Ministério da Educação e Cultura de Moçambique.</b> Orientações institucionais sobre educação e permanência escolar.</li>
+</ol></div><div class="notice">Nota académica: não indiquem como consultado um livro, artigo ou documento que o grupo não tenha realmente lido. Acrescentem a data de consulta dos recursos online e os dados completos dos materiais utilizados.</div></section>
+
+<section class="page" id="grupo"><div class="team"><span class="tag">IDENTIFICAÇÃO DO TRABALHO</span><h2 style="margin-top:15px">Elementos do grupo</h2><p>Trabalho escolar sobre Gravidez Precoce e Abandono Escolar.</p>
+<div class="fields"><div class="field"><small>Turma</small><b>B01</b></div><div class="field"><small>Classe</small><b>[Indicar a classe]</b></div><div class="field"><small>Escola</small><b>[Nome da escola]</b></div><div class="field"><small>Professor(a)</small><b>[Nome do(a) professor(a)]</b></div></div>
+<h3 style="margin-top:24px">Membros do grupo</h3><ol><li>[Nome completo do primeiro membro]</li><li>[Nome completo do segundo membro]</li><li>[Nome completo do terceiro membro]</li><li>[Nome completo do quarto membro]</li></ol></div>
+<p class="muted">Antes da apresentação, preencham todos os campos entre parênteses rectos e confirmem as fontes efectivamente consultadas.</p>
+<div class="notice"><b>Nota de responsabilidade:</b> este website tem finalidade educativa e não substitui aconselhamento médico, psicológico ou jurídico.</div></section>
+</main>
+<footer><b>JUVENTUDE COM FUTURO • TURMA B01</b><br>Gravidez Precoce e Abandono Escolar<br>Educação, prevenção, respeito e oportunidades para todos.</footer>
+<script>
+(()=>{const pages=[...document.querySelectorAll('.page')],links=[...document.querySelectorAll('nav a')],nav=document.getElementById('nav'),menu=document.getElementById('menu');function show(){let id=(location.hash||'#inicio').slice(1);if(!pages.some(p=>p.id===id))id='inicio';pages.forEach(p=>p.classList.toggle('active',p.id===id));links.forEach(a=>a.classList.toggle('active',a.hash==='#'+id));nav.classList.remove('open');menu.setAttribute('aria-expanded','false');window.scrollTo({top:0,behavior:'smooth'});}menu.addEventListener('click',()=>{let open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});window.addEventListener('hashchange',show);show();})();
+</script><noscript><style>.page{display:block!important}</style></noscript>
+</body></html>
